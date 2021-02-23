@@ -1,0 +1,25 @@
+1.	When an assignment is performed without using let or const keywords in strict mode it throws a reference error.
+2.	Five reserved keywords in JavaScript are let, const, return, class, function.
+3.	An algorithm is a step-by-step instruction to solve a specific problem where are a computer program is a coded version of algorithm in a specific programming language.
+4.	Study Algorithm
+Come to class at 10 AM
+Setup the computer for the study
+Make the papers and pen ready for the class
+Listen to the lectures
+Ask questions when necessary
+Meditate for 15 minutes
+Go for lunch
+Return to the class again
+Do the assignments in the lab session
+Meditate
+End of the class
+5.	Shopping Algorithm
+Make a minimum stock level of the goods to be purchased.
+If the stock is less than the minimum stock level, purchase it.
+Else, consume it.
+If the stock price is less a discounted price, purchase 50 percent more
+If it’s price is hiked, purchase 30 percent less.
+If the price doubles, purchase the substitute product.
+
+
+
