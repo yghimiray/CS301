@@ -17,30 +17,30 @@ s = (a+b+c)/2
 Write separate functions for each of the named formulas
 */
 
-function houseVolume(){
-    return livingVolume() + roofVolume();
+function calcHouseVolume(){
+    return calcLivingVolume() + calcRoofVolume();
 }
 
-function livingVolume(){
+function calcLivingVolume(){
     return width * height * length ;
 }
 
-function roofVolume(){
-return triangleArea() * length ;
+function calcRoofVolume(){
+return calcTriangleArea() * length ;
 }
 
-function triangleArea(){
-    let s = semiPerimeter();
+function calcTriangleArea(){
+    let s = calcSemiPerimeter();
     let sA = s - sweep; // (s-a)
     let sB = sA; // (s-b)
     let sC = s - width; // (s-c)
     return Math.sqrt (s * sA * sB * sC ); // √s(s−a)(s−b)(s−c)
 }
 
-function semiPerimeter (){
+function calcSemiPerimeter (){
     return (sweep + sweep + width)/2 ;
 }
 
-console.log ("Living Volume : ", livingVolume());
-console.log("Roof Volume : ", roofVolume());
-console.log("Total Volume of House : ", houseVolume());
+console.log ("Living Volume : ", calcLivingVolume());
+console.log("Roof Volume : ", calcRoofVolume());
+console.log("Total Volume of House : ", calcHouseVolume());
