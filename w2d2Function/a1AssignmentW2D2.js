@@ -1,6 +1,6 @@
 "use strict";
 
-let greatestCommonDivisor = function (m,n) {
+const greatestCommonDivisor = function (m,n) {
     while ( m !== n) {
         if(m > n ){
             m = m - n;
