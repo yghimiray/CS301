@@ -10,7 +10,7 @@ argument is a prime number otherwise returns false
   */
 
 
-function checkPrime(num) {
+function checkPrime(num){
     for (let i = 2; i < num; i++) {
         if (num % i === 0) {
             return false;
