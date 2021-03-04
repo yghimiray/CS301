@@ -10,12 +10,12 @@ const greatestCommonDivisor = function (m,n) {
    
     }
     return m;
-}
+};
 
 const leastCommonMultiple = function (a,b) {
     let g = greatestCommonDivisor(a,b);
    let LCM = ( a * b ) / g ; // GCD * LCM = product of two numbers.
     return LCM ;
-}
+};
 
 console.log (leastCommonMultiple (20,28));

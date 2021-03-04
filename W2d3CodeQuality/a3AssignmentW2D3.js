@@ -41,6 +41,7 @@ function calcSemiPerimeter (){
     return (sweep + sweep + width)/2 ;
 }
 
+
 console.log ("Living Volume : ", calcLivingVolume());
 console.log("Roof Volume : ", calcRoofVolume());
 console.log("Total Volume of House : ", calcHouseVolume());

@@ -1,10 +1,10 @@
 "use strict";
 
-const compute = function (computeFunc,m,n) {
+const compute = function(computeFunc,m,n) {
        return computeFunc(m , n);
 };
 
-const add = function ( m , n){
+const add = function(m , n){
     return m + n;
 }
 
