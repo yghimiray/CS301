@@ -189,12 +189,11 @@ console.log(filterPalindromes(testPalindrome));
  */
 
 function matrixAddition(arr1,arr2){
-let arr3 =[];
-for(let i = 0; i < arr1[0].length; i++){
-    for (let j = 0; j< arr1.length; j++){
-        let sum = arr1[i][j]+arr2[i][j];
-        arr3.push(sum);
-    }
+let arr3 =[[],[]];
+for(let i = 0; i < arr1.length; i++){
+    for (let j = 0; j< arr1[0].length; j++){
+        arr3[i][j] = arr1[i][j]+arr2[i][j];
+           }
 }
 return arr3;
 }
@@ -202,3 +201,4 @@ return arr3;
 const arr1 =[[0,1,2],[9,8,7]];
 const arr2 =[[6,5,4],[3,4,5]];
 console.log(matrixAddition(arr1,arr2));
+

@@ -46,3 +46,23 @@ for (let i = 0; i < 10; i++){
 
 console.log("Random Numbers" , randomNumbers);
 console.log ("average of random numbers :" , findAverage(randomNumbers));
+
+/*Write a function, invert, that will reverse an array and output the
+reversed elements as a string with an optional separator.
+*/
+
+
+/**
+ * 
+ * @param {Array} arr 
+ * @param {string} seperator 
+ * @returns {string} a joined string
+ */
+
+function invert(arr,seperator = "..."){
+let reverseArray = arr.reverse();
+let str = reverseArray.join(seperator);
+return str;
+}
+
+console.log(invert(scores,"<<>>"));
