@@ -95,7 +95,7 @@ function rotateNRight(arr, n) {
     }
     return arr;
 }
-console.log(rotateNRight(array,3));
+console.log(rotateNRight(array, 3));
 
 /*6. Write a JavaScript program that number input from the user at once as comma separated values
 and stores it into an array and do following operations
@@ -104,8 +104,8 @@ b. Maps the filtered elements to sum of its digits (optional)
 c. Reduce to get sum of all the elements (optional)
 */
 
-const input = "1, 2, 3, 4, 5"; 
-const inputArray =  input.split(",");
+const input = "1, 2, 3, 4, 5";
+const inputArray = input.split(",");
 console.log(inputArray);
 
 
@@ -126,18 +126,18 @@ describe("filterRange", function () {
  * @param {int} b the upper limit
  */
 
-function filterRange(arr, a, b){
-let arr1 =[];
-for(let i = 0; i < arr.length; i++){
-    if(arr[i] >= a && arr[i] <= b){
-        arr1.push(arr[i]);
+function filterRange(arr, a, b) {
+    let arr1 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= a && arr[i] <= b) {
+            arr1.push(arr[i]);
+        }
     }
-}
-return arr1;
+    return arr1;
 }
 
-const test = [0, 100, 3, 6, -555]
-console.log(filterRange(test,6,160));
+const test = [0, 100, 3, 6, -555];
+console.log(filterRange(test, 6, 160));
 
 /* Q8. Write a function that takes an array of strings and returns array of palindrome strings only.
 */
@@ -147,14 +147,14 @@ console.log(filterRange(test,6,160));
  * @param {Array} arr an array of string.
  */
 
-function filterPalindromes(arr){
-let palinArr = [];
-for(let i = 0; i < arr.length; i++){
-    if(isPalindrome(arr[i])){
-        palinArr.push(arr[i]);
+function filterPalindromes(arr) {
+    let palinArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isPalindrome(arr[i])) {
+            palinArr.push(arr[i]);
+        }
     }
-}
-return palinArr;
+    return palinArr;
 }
 
 // program to check if the string is palindrome or not
@@ -167,7 +167,7 @@ return palinArr;
 
 function isPalindrome(str) {
     const len = str.length;
-   for (let i = 0; i < len / 2; i++) {
+    for (let i = 0; i < len / 2; i++) {
         if (str[i] !== str[len - 1 - i]) {
             return false;
         }
@@ -188,17 +188,18 @@ console.log(filterPalindromes(testPalindrome));
  * @param {Array} arr2 second array of numbers
  */
 
-function matrixAddition(arr1,arr2){
-let arr3 =[[],[]];
-for(let i = 0; i < arr1.length; i++){
-    for (let j = 0; j< arr1[0].length; j++){
-        arr3[i][j] = arr1[i][j]+arr2[i][j];
-           }
-}
-return arr3;
+function matrixAddition(arr1, arr2) {
+    let arr3 = [[], []];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr1[0].length; j++) {
+            arr3[i][j] = arr1[i][j] + arr2[i][j];
+        }
+    }
+    return arr3;
 }
 
-const arr1 =[[0,1,2],[9,8,7]];
-const arr2 =[[6,5,4],[3,4,5]];
-console.log(matrixAddition(arr1,arr2));
+const arr1 = [[0, 1, 2], [9, 8, 7]];
+const arr2 = [[6, 5, 4], [3, 4, 5]];
+console.log(matrixAddition(arr1, arr2));
+
 
