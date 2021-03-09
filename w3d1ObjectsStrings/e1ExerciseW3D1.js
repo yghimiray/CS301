@@ -42,7 +42,7 @@ any case (small, capital or mixed)
 const prompt = require ("prompt-sync")();
 let input ;
 do{
-    input = prompt("Say something :")
+    input = prompt("Say something :");
     input= input.toLowerCase();
 }while(input !== "stop");
 

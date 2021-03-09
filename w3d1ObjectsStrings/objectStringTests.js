@@ -27,7 +27,7 @@ describe("isPersonEqual", function () {
 describe("countProperties", function () {
 
     it("2 properties", function () {
-        const bob = { name: "Bob", age: 10 }
+        const bob = { name: "Bob", age: 10 };
         assert.strictEqual(str.countProperties(bob), 2);
     });
 });
@@ -39,11 +39,11 @@ describe("countProperties", function () {
 describe("checkSpam", function () {
 
     it("contains prize and lottery", function () {
-        const string1 = "there is a prize in the lottery"
+        const string1 = "there is a prize in the lottery";
         assert.strictEqual(str.checkSpam(string1), true);
     });
     it("does not contain prize or lottery", function () {
-        const string2 = "there is a nothing in the fridge"
+        const string2 = "there is a nothing in the fridge";
         assert.strictEqual(str.checkSpam(string2), false);
     });
 });

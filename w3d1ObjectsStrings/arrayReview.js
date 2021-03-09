@@ -5,7 +5,6 @@
  * @param {Array} arr an array of numbers 
  * @returns {number} a mimnimum number.
  */
-
 function findMin(arr){
 let min = arr[0];
 for(const item of arr){
@@ -17,7 +16,7 @@ return min;
 }
 
 let array = [11,12,3,5,4,6,12];
-let array1 = [1,0,9,7,8,6,0]
+let array1 = [1,0,9,7,8,6,0];
 // console.log(findMin(array));
 
 /**
@@ -25,7 +24,6 @@ let array1 = [1,0,9,7,8,6,0]
  * @param {Array} arr an array of number
  * @returns {number} sum of odd indexed elements
  */
-
 function sumOddIndicesValues(arr){
     let sum = 0;
     for(let i = 0; i < arr.length; i++){

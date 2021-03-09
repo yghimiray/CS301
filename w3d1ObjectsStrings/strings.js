@@ -97,23 +97,26 @@ returns the common suffix.
  * @returns {string} common suffix 
  */
 function suffix(str1, str2) {
-    const len1 = str1.length - 1;
-    const len2 = str2.length - 1;
+    let len1 = str1.length - 1;
+    let len2 = str2.length - 1;
     let suffixStr = "";
-    for (let i = len1; i >= 0; i--) {
-        for (let j = len2; j >= 0; j--) {
-            if (str1[i] === str2[j]) {
-                suffixStr = str1[i] + suffixStr;
-            } 
+    while (len1 >= 0 || len2 >= 0) {
+        if (str1[len1] !== str2[len2]) {
+           break;
+        }else {
+            suffixStr = str1[len1] + suffixStr;
         }
+        len1--;
+        len2--;
     }
+
     return suffixStr;
 }
 
 let firstStr = "swimming";
 let secondStr = "walking";
 
-console.log(suffix(firstStr,secondStr));
+console.log(suffix(firstStr, secondStr));
 
 
 /* Q6. 6. Write a function named titleCase with one parameter named s. This function returns a copy of s
@@ -152,15 +155,15 @@ Output
  */
 function getAverageAge(users) {
     let sumAge = 0;
-    for(let person of users){
-sumAge = sumAge + person.age;
+    for (let person of users) {
+        sumAge = sumAge + person.age;
     }
-     let avgAge = sumAge / 2;
+    let avgAge = sumAge / 2;
     return avgAge;
 }
 
 
-let people = [{name:"Sam", age:20},  {name:"Fred", age:10}];
+let people = [{ name: "Sam", age: 20 }, { name: "Fred", age: 10 }];
 console.log(getAverageAge(people));
 
 /* Q8. Write a function to return the sum of the first elements of the inner arrays for arrays with the
