@@ -3,6 +3,7 @@
 
 exports.computeHeight = computeHeight;
 exports.findMinDistance = findMinDistance;
+exports.computeCharges = computeCharges;
 
 /* Q4. The Utopian Tree goes through 2 cycles of growth every year. Each spring, it doubles in height. Each
 summer, its height increases by 1 meter.
@@ -39,15 +40,15 @@ function findMinDistance(arr) {
                 continue;
             } else {
                 if (arr[i] === arr[j]) {
-                distance = makeAbsolute(j - i);
-                if (distance < min) {
-                    min = distance;
+                    distance = makeAbsolute(j - i);
+                    if (distance < min) {
+                        min = distance;
+                    }
                 }
-            } 
             }
         }
     }
-    if(min === arr.length){
+    if (min === arr.length) {
         return -1;
     }
     return min;
@@ -69,37 +70,57 @@ function makeAbsolute(num) {
 
 // /* Q5. Write a function, computeCharges, that will accept an array that contains objects with
 // properties for the customer Id and charges. Your function should return an array that contains
-// objects with the customer Id, average charge, and maximam charge.
+// objects with the customer Id, average charge, and maximum charge.
 // Hint: write helper functions to getMax and getAverage of an array of charges to keep your code
 // organized.
 // */
 
-// function getAverage(arr){
-//     let sum = 0;
-//     let len = arr. length;
-//     for (let element of arr){
-//         sum = sum + element;
-//     }
-//     let avg = sum / len;
-//     return avg;
-// }
+function getAverage(arr) {
+    let sum = 0;
+    let len = arr.length;
+    for (let element of arr) {
+        sum = sum + element;
+    }
+    let avg = sum / len;
+    return avg;
+}
 
-// function getMax(arr){
-// let max = arr[0];
-// for (let element of arr){
-//     if(element > max){
-//         max = element;
-//     }
-// }
-// return max;
-// }
+function getMax(arr) {
+    let max = arr[0];
+    for (let element of arr) {
+        if (element > max) {
+            max = element;
+        }
+    }
+    return max;
+}
 
-// const arr = [5,7,3]
+// const arr = [5, 7, 3]
 // console.log(getMax(arr));
 
-// function computeCharges(arr){
+function computeCharges(arr) {
+    let customer;
+    let arr1 = [];
+    for (let element of arr) {
+        let custId = element.custId;
+        let avg = getAverage(element.charges);
+        let max = getMax(element.charges);
+        customer = makeCustomer(custId, avg, max);
+        arr1.push(customer);
+    }
+    return arr1;
+}
 
-// }
+function makeCustomer(custId, average, maximum) {
+    return {
+        custId,
+        average,
+        maximum,
+    }
+}
+
+const charges = [{ custId: 1, charges: [5, 7, 3] }, { custId: 2, charges: [20, 60, 50, 30] }]
+console.log (computeCharges(charges));
 
 
 /* Q3. There is a large pile of socks that must be paired by color. Write a
@@ -117,20 +138,23 @@ function countSocksPairs(ar) {
 
     let pairs = 0;
 
-  for (let element of ar) {
+    for (let element of ar) {
 
-    socks[element] = socks[element] + 1 || 1;
+        socks[element] = socks[element] + 1 || 1;
 
-      if (socks[element] % 2 === 0) {
+        if (socks[element] % 2 === 0) {
 
-        pairs += 1;
+            pairs += 1;
 
-      }
+        }
 
     }
 
-  return pairs;
+    return pairs;
 
-  }
+}
 
-  console.log(countSocksPairs([10,20,20,10,10,30,50,10,20] ))
+//   console.log(countSocksPairs([10,20,20,10,10,30,50,10,20] ))
+
+
+
